@@ -4,9 +4,9 @@ This is a CPU implementation of the Lagrangian Sheet density estimation method p
 
 ## Implementation
 
-This code starts by decomposing the particle grid into tetrahedra. There are 8 possible options for this decomposition (2[^3] orientations). I included two versions of the code, one computes density form one single orientation and another version computing the average of the 8 possible orientations.
+The code starts by decomposing the particle grid into tetrahedra. There are 8 possible options for this decomposition (2[^3] orientations). I included two versions of the code, one computes density from one single orientation and the other version computes the average of the 8 possible orientations.
 
-The next step is rendering into a datacube. Each tetrahedron is mapped to the datacube and sliced along the z-axis at the position of each z slice in the datacube. At each slice the resulting triangle is rendered using a standard rendering algorithm used for 3D graphics. The rendering is the most expensive part of the code and I used a highly optimized version described here: http://devmaster.net/forums/topic/1145-advanced-rasterization/
+The next step is rendering into a datacube. Each tetrahedron is mapped to the output datacube and sliced along the z-axis at the position of each z slice in the datacube. At each slice the resulting triangle is rendered using a standard rendering algorithm used for 3D graphics. The rendering is the most expensive part of the code and I used a highly optimized version described here: http://devmaster.net/forums/topic/1145-advanced-rasterization/
 
 The rasterization could have been done faster on the GPU using a simple openGL floating point rendering. However I wanted a CPU multi-threaded version that was not constrained by memory so I could run very large simulations and produce large datacubes. Still the code is very fast and has linear scaling on multicore systems. A simulation with 512[^3] particles rendered on a 1024[^3] grid will take a few minutes to run on a 64 core workstation.
 
