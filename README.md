@@ -2,6 +2,12 @@
 
 This is a CPU implementation of the Lagrangian Sheet density estimation method proposed in Shandaring et al. (2012) and Abel et al. (2012). The main idea is to assume that mass is a continuous field decomposed in volumes defined by the initial particle grid (instead of assuming that particles are a sampling of the continuous density field). Assuming mass conservation inside each volume we can easily compute densities at any time by tracing the Lagrangian grid. This is the best available method to compute densities in the low and medium (delta < 0) density regime.
 
+[[images/COSMO_FIRE_016-512.png]]
+
+and a zoom in the halo near the center of the simulation box:
+
+[[images/COSMO_FIRE_016_HR_zoom1.png]]
+
 ## Implementation
 
 The code starts by decomposing the particle grid into tetrahedra. There are 8 possible options for this decomposition (2<sup>3</sup> orientations). I included two versions of the code, one computes density from one single orientation and the other version computes the average of the 8 possible orientations.
