@@ -6,7 +6,7 @@ This is a CPU implementation of the Lagrangian Sheet density estimation method p
 
 and a zoom in the halo near the center of the simulation box:
 
-![alt text](images/COSMO_FIRE_016_HR_zoom1.png "Description goes here")
+![picture](images/COSMO_FIRE_016_HR_zoom1.png "Description goes here")
 
 ## Implementation
 
