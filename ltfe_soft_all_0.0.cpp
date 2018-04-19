@@ -2,6 +2,14 @@
 
   TRIANGLE SOFTWARE RASTERIZER
 
+  Compute density field from a particle distribution using the Lagrangian Sheet method method proposed in 
+  Shandaring et al. (2012) and Abel et al. (2012). 
+  
+  The code computes slices across the 3D lagrangian tessellation and the renders the plane consisting of triangles
+  using a triangle renderer.
+  
+  This version of the code computes all 8 possible tetrahedral partitions of a voxel and averages the density at each vertex.
+
   Triangle renderer shamelesly ripped from: http://devmaster.net/forums/topic/1145-advanced-rasterization/
   (at least I read the whole post...)
 
