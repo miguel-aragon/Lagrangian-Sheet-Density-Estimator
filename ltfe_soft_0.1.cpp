@@ -2,16 +2,21 @@
 
   TRIANGLE SOFTWARE RASTERIZER
 
+  Compute density field from a particle distribution using the Lagrangian Sheet method method proposed in 
+  Shandaring et al. (2012) and Abel et al. (2012). 
+  
+  The code computes slices across the 3D lagrangian tessellation and the renders the plane consisting of triangles
+  using a triangle renderer.
+
   Triangle renderer shamelesly ripped from: http://devmaster.net/forums/topic/1145-advanced-rasterization/
   (at least I read the whole post...)
-
 
   A few notes:
    - Triangles must be in counter-clockwise order.
    - http://stackoverflow.com/questions/11184473/how-to-link-a-c-shared-library-with-gcc
 
 
-  Compile (shared library), IDL complains if not compiled with openMP flags...
+  If compiled as shared library IDL complains if not compiled with openMP flags...
 
   PARALLEL (openMP)
    g++ -O3 -D_REENTRANT -fopenmp ltfe_soft_0.1.cpp -o ltfe_soft
