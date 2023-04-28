@@ -28,4 +28,4 @@ The rasterization could have been done faster on the GPU using a simple openGL f
 
 ## Using this code:
 
-If you find this code useful I would appreciate if you could point to this github and cite it if you use the code in your research.
+If you find this code useful and use it in your research I would appreciate it if you could point to this github and cite it as well as the following paper: https://ui.adsabs.harvard.edu/abs/2019OJAp....2E...7A/abstract 
